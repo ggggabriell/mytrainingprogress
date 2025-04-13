@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "952830049998",
+    "project_id": "mytrainingprogress-877fe",
+    "storage_bucket": "mytrainingprogress-877fe.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952830049998:android:dc3210d988a3c518bfda9f",
+        "android_client_info": {
+          "package_name": "com.mytrainingprogress.mytrainingprogress"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQNr9EFZ5_NlUJj86wF1Id1y6p4dzwQ9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

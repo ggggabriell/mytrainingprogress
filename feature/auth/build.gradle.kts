@@ -3,10 +3,11 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.compose.compiler)
+    alias(libs.plugins.google.services)
 }
 
 android {
-    namespace = "com.mytrainingprogress.ui"
+    namespace = "com.mytrainingprogress.auth"
     compileSdk = 35
 
     defaultConfig {
@@ -19,26 +20,19 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    buildFeatures {
-        compose = true
-    }
 }
 
 dependencies {
+    implementation(project(":core:ui"))
+    implementation(project(":core:common"))
 
-    api(platform(libs.compose.bom))
-    api(libs.bundles.compose)
-    api(libs.androidx.activity.compose)
-
-    api(libs.androidx.appcompat)
-    api(libs.androidx.core.ktx)
-    api(libs.androidx.lifecycle.runtime.ktx)
-    api(libs.material)
-    api(libs.androidx.work.runtime.ktx)
-
-
+    // Koin
     implementation(platform(libs.koin.bom))
     implementation(libs.bundles.koin)
-    implementation(libs.koin.android)
     ksp(libs.koin.ksp.compiler)
+
+    // Firebase
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
+    implementation(libs.play.services.auth)
 }

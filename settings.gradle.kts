@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "MyTrainingProgress"
 include(":app")
 include(":core:ui")
+include(":feature:auth")
+include(":core:common")
